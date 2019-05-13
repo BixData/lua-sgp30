@@ -30,6 +30,7 @@ end
 -- sgp30 module
 -- ============================================================================
 
-it('test', function()
-  --local i2c = periphery.I2C('/dev/i2c-1')
+it('initAirQuality', function()
+  local i2c = periphery.I2C('/dev/i2c-1')
+  sgp30.initAirQuality(i2c)
 end)
