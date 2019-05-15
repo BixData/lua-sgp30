@@ -6,7 +6,8 @@ local M = {
     GetFeatureSet     = {0x20, 0x2f},
     InitAirQuality    = {0x20, 0x03},
     MeasureAirQuality = {0x20, 0x08},
-    MeasureRawSignals = {0x20, 0x50}
+    MeasureRawSignals = {0x20, 0x50},
+    MeasureTest       = {0x20, 0x32}
   },
   DEVICE = 0x58
 }
@@ -34,6 +35,15 @@ function M.measureRawSignals(i2c, device)
   local sout_H2 = msg[1]*256 + msg[2]
   local sout_EthOH = msg[4]*256 + msg[5]
   return sout_H2, sout_EthOH
+end
+
+function M.measureTest(i2c, device)
+  i2c:transfer(device or M.DEVICE, {M.Command.MeasureTest})
+  socket.sleep(.220)
+  local msg = {0x00, 0x00, 0x00, flags=I2C.I2C_M_RD}
+  i2c:transfer(device or M.DEVICE, {msg})
+  local result = msg[1]*256 + msg[2]
+  return result == 0xd400
 end
 
 function M.readVersion(i2c, device)

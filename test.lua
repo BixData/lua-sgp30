@@ -50,6 +50,11 @@ it('measureRawSignals', function()
   assertEquals(true, sout_EthOH > 0)
 end)
 
+it('measureTest (sensor self-test)', function()
+  local i2c = periphery.I2C('/dev/i2c-1')
+  assertEquals(true, sgp30.measureTest(i2c))
+end)
+
 it('readVersion', function()
   local i2c = periphery.I2C('/dev/i2c-1')
   local actual = sgp30.readVersion(i2c)

@@ -8,6 +8,8 @@ The SGP30 requires a delay between making a request and reading a response, whic
 
 ## Usage
 
+### Measure Air Quality
+
 Note that this particular sensor must be asked to perform measurements at 1-second intervals for at least 15 seconds before it begins to function.
 
 ```lua
@@ -49,4 +51,16 @@ Volatile Organic Compounds:   68 PPB
 Carbon Dioxide            : 2710 PPM
 Volatile Organic Compounds:  147 PPB
 ...
+```
+
+### "Press to test" sensor self-test
+
+```lua
+local periphery = require 'periphery'
+local sgp30 = require 'sgp30'
+
+local device = 0x58
+
+local i2c = periphery.I2C('/dev/i2c-1')
+assert(sgp30.measureTest(i2c, device))
 ```
