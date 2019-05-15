@@ -35,6 +35,13 @@ it('initAirQuality', function()
   sgp30.initAirQuality(i2c)
 end)
 
+it('measureAirQuality', function()
+  local i2c = periphery.I2C('/dev/i2c-1')
+  sgp30.initAirQuality(i2c)
+  local co2PPM, vocPPB = sgp30.measureAirQuality(i2c)
+  assertEquals(co2PPM >= 400)
+end)
+
 it('readVersion', function()
   local i2c = periphery.I2C('/dev/i2c-1')
   local actual = sgp30.readVersion(i2c)
