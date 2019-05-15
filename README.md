@@ -2,13 +2,13 @@
 
 # SGP30 Lua driver
 
-A [lua-periphery](https://github.com/vsergeev/lua-periphery) based sensor driver for the [SGP30](https://www.adafruit.com/product/3709) air quality sensor.
+A [lua-periphery](https://github.com/vsergeev/lua-periphery) based driver for the [SGP30](https://www.adafruit.com/product/3709) air quality sensor.
 
 The SGP30 requires a delay between making a request and reading a response, which is why a [luasocket](https://luarocks.org/modules/luasocket/luasocket) dependency exists for its _sleep_ capability.
 
 ## Usage
 
-Note that this particular device must be asked to perform measurements at 1-second intervals for at least 15 seconds before it begins to function.
+Note that this particular sensor must be asked to perform measurements at 1-second intervals for at least 15 seconds before it begins to function.
 
 ```lua
 local periphery = require 'periphery'
@@ -28,7 +28,7 @@ for i = 1, 20 do
 end
 ```
 
-Sample output, obtained by waiting for 15 seconds, then breathing on the device:
+Sample output, obtained by waiting for 15 seconds, then breathing on the sensor:
 
 ```
 ...
