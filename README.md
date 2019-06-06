@@ -6,6 +6,16 @@ A [lua-periphery](https://github.com/vsergeev/lua-periphery) based driver for th
 
 The SGP30 requires a delay between making a request and reading a response, which is why a [luasocket](https://luarocks.org/modules/luasocket/luasocket) dependency exists for its _sleep_ capability.
 
+## Installing
+
+If you are on Linux:
+
+```sh
+$ luarocks install sgp30
+```
+
+Otherwise, you can use the Lua module from within a Go app via [glua-periphery](https://github.com/BixData/gluaperiphery).
+
 ## Usage
 
 ### Measure Air Quality
