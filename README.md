@@ -14,7 +14,7 @@ If you are on Linux:
 $ luarocks install sgp30
 ```
 
-Otherwise, you can use the Lua module from within a Go app via [glua-periphery](https://github.com/BixData/gluaperiphery).
+Otherwise, you can use the Lua module from within a Go app via [glua-periphery](https://github.com/nubix-io/gluaperiphery).
 
 ## Usage
 

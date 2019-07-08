@@ -1,7 +1,7 @@
 package = "sgp30"
 version = "0.1.0-1"
 source = {
-   url = "https://github.com/BixData/lua-sgp30/archive/0.1.0-1.tar.gz",
+   url = "https://github.com/nubix-io/lua-sgp30/archive/0.1.0-1.tar.gz",
    dir = "lua-sgp30-0.1.0-1"
 }
 description = {
@@ -10,7 +10,7 @@ description = {
      The SGP30 is a digital multi-pixel gas sensor designed for easy integration
      into air purifier, demand-controlled ventilation, and IoT applications. 
    ]],
-   homepage = "https://github.com/BixData/lua-sgp30",
+   homepage = "https://github.com/nubix-io/lua-sgp30",
    maintainer = "David Rauschenbach",
    license = "MIT"
 }
