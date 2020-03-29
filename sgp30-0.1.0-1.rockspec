@@ -8,10 +8,10 @@ description = {
    summary = "SGP30 I²C Air Quality Sensor driver",
    detailed = [[
      The SGP30 is a digital multi-pixel gas sensor designed for easy integration
-     into air purifier, demand-controlled ventilation, and IoT applications. 
+     into air purifier, demand-controlled ventilation, and IoT applications.
    ]],
    homepage = "https://github.com/nubix-io/lua-sgp30",
-   maintainer = "David Rauschenbach",
+   maintainer = "Nubix Inc.",
    license = "MIT"
 }
 dependencies = {
